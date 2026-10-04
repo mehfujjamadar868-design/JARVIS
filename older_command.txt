@@ -1,0 +1,122 @@
+#@this are the commands and argument that are used to for workinng the JARVIS now we upgraded it into intend 
+
+ while True:
+        # Keeps JARVIS running continuously
+
+        command = listen()
+        # Takes user's command and converts it to lowercase
+
+        print(f"DEBUG: [{command}]")
+        # Shows the command JARVIS received
+
+
+        if command == "exit":
+            # Checks if the user wants to stop JARVIS
+            speak("Goodbye, sir!")
+            print("Jarvis: Goodbye, sir!")
+            break
+            # Stops the while loop
+
+
+        elif "open youtube" in command:
+            # Checks if the user wants to open YouTube
+            speak("Certainly, sir. Opening YouTube...")
+            print("Jarvis: Certainly, sir. Opening YouTube...")
+            open_website("https://www.youtube.com")
+
+        elif "open google" in command:
+            # Checks if the user wants to open Google
+            speak("Certainly, sir. Opening Google...")
+            print("Jarvis: Opening Google...")
+            open_website("https://www.google.com")
+
+        elif "open github" in command:
+            # Checks if the user wants to open GitHub
+            speak("Certainly, sir. Opening GitHub...")
+            print("Jarvis: Opening GitHub...")
+            open_website("https://github.com")
+
+        elif "open chatgpt" in command:
+            # Checks if the user wants to open ChatGPT
+            speak("Certainly, sir. Opening ChatGPT...")
+            print("Jarvis: Opening ChatGPT...")
+            open_website("https://chatgpt.com")
+
+        elif "open my portfolio" in command:
+            # Checks if the user wants to open the portfolio
+            speak("Certainly, sir. Opening Portfolio...")
+            print("Jarvis: Opening Portfolio...")
+            open_website("https://mehfujjamadar.wordpress.com/")
+
+        elif "open my website" in command:
+            # Checks if the user wants to open the personal website
+            speak("Certainly, sir. Opening My Website...")
+            print("Jarvis: Opening My Website...")
+            open_website("https://mehfujjamadar-ms-r3435.netlify.app/")
+
+        elif command.startswith("search "):
+            # Checks if the user wants to search something
+            query = command[7:]
+            # Removes "search " and keeps the actual search text
+            speak(f"Searching Google for {query}...")
+            print(f"Jarvis: Searching Google for {query}...")
+            google_search(query)
+
+        elif command.startswith("play "):
+            # Checks if the user wants to play/search a song
+            query = command[5:]
+            # Removes "play " and keeps the song name
+            speak(f"Playing {query} on YouTube...")
+            print(f"Jarvis: Playing {query} on YouTube...")
+            youtube_search(query)
+
+        elif "what is the time" in command or "what's the time" in command:
+            # Checks if the user asks for the current time
+            current_time = get_time()
+             # Gets the current time
+
+            print(f"Jarvis: The time is {current_time}")
+            # Displays the time
+
+            speak(f"The time is {current_time}")
+            # Speaks the time
+
+        elif "what is today's date" in command or "what is the date" in command:
+             # Checks if the user asks for today's date
+
+            current_date = get_date()
+            # Gets today's date
+            print(f"Jarvis: Today's date is {current_date}")
+            # Displays the date
+            speak(f"Today's date is {current_date}")
+            # Speaks the date
+
+        elif "open notepad" in command:
+            # Checks if the user wants to open Notepad
+
+            speak("Opening Notepad.")
+            # Speaks the response
+
+            print("Jarvis: Opening Notepad.")
+            # Displays the response
+
+            open_notepad()
+            # Opens Notepad
+
+        elif "open calculator" in command:
+            # Checks if the user wants to open Calculator
+
+            speak("Opening Calculator.")
+            # Speaks the response
+
+            print("Jarvis: Opening Calculator.")
+            # Displays the response
+
+            open_calculator()
+            # Opens Calculator
+
+
+        else:
+            # Runs when JARVIS doesn't understand the command
+            speak("Sorry, I don't know that command yet.")
+            print("Jarvis: Sorry, I don't know that command yet.")
