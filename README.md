@@ -4,13 +4,13 @@ A personal AI assistant built progressively with Python.
 
 ## Progress
 
-- ? Phase 1 — Voice input and speech output
-- ? Phase 2 — Modular command architecture
-- ?? Phase 3 — LLM brain
-- ? Phase 4 — Tool calling
-- ? Phase 5 — Memory
-- ? Phase 6 — Planning
-- ? Phase 7 — Testing and reliability
+-  Phase 1 â€” Voice input and speech output
+-  Phase 2 â€” Modular command architecture
+-  Phase 3 â€” LLM brain
+-  Phase 4 â€” Tool calling
+-  Phase 5 â€” Memory
+-  Phase 6 â€” Planning
+-  Phase 7 â€” Testing and reliability
 
 ## Approach
 
