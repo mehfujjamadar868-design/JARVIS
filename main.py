@@ -18,6 +18,9 @@ def main():
     # Speaks the greeting
     print("Hello! I am Jarvis. How can I help you?")
 
+    speak("what are we doing today? sir ")
+    print("what are we doing today? sir ")
+
     while True:
         command = listen()
         # Gets the command from the microphone
@@ -48,6 +51,44 @@ def main():
             open_website("https://www.youtube.com")
             # Opens YouTube
 
+        elif intent == "open_my_portfolio":
+            # Checks if the user wants to open your personal website
+            speak("Opening your portfolio.")
+            # Speaks the response
+            print("Jarvis: Opening your portfolio.")
+            # Displays the response
+            open_website("https://mehfujjamadar.wordpress.com/")
+            # Opens your personal website
+
+
+        elif intent == "open_linkedin":
+            # Checks if the user wants to open LinkedIn
+            speak("Opening LinkedIn.")
+            # Speaks the response
+            print("Jarvis: Opening LinkedIn.")
+            # Displays the response
+            open_website("https://www.linkedin.com/in/mehfuj-jamadar-0a1b4b1a6/")
+            # Opens LinkedIn
+
+
+        elif intent == "open_my_website":
+            # Checks if the user wants to open your personal website
+            speak("Opening your personal website.")
+            # Speaks the response
+            print("Jarvis: Opening your personal website.")
+            # Displays the response
+            open_website("https://mehfujjamadar-ms-r3435.netlify.app/")
+            # Opens your personal website
+
+
+        elif intent == "open_my_github":
+            # Checks if the user wants to open your GitHub
+            speak("Opening your GitHub.")
+            # Speaks the response
+            print("Jarvis: Opening your GitHub.")
+            # Displays the response
+            open_website("https://github.com/mehfujjamadar868-design")
+    
 
         elif intent == "open_google":
             # Checks if the user wants to open Google
