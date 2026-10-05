@@ -88,7 +88,15 @@ def main():
             print("Jarvis: Opening your GitHub.")
             # Displays the response
             open_website("https://github.com/mehfujjamadar868-design")
-    
+
+        elif intent == "open_my_instagram":
+            # Checks if the user wants to open your Instagram
+            speak("Opening your Instagram.")
+            # Speaks the response
+            print("Jarvis: Opening your Instagram.")
+            # Displays the response
+            open_website("https://www.instagram.com/mehfuj_707?stkn=b3BvbTdreGQ3YTVy")
+            # Opens your Instagram
 
         elif intent == "open_google":
             # Checks if the user wants to open Google
