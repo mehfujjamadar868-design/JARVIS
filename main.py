@@ -166,29 +166,38 @@ def main():
             # Speaks the date
             print(f"Jarvis: Today's date is {current_date}.")
             # Displays the date
-
+        
         elif intent == "google_search":
             # Checks if the user wants a Google search
-            query = command[7:]
-            # Removes "search " and keeps the search text
-            speak(f"Searching Google for {query}.")
-            # Speaks the response
-            print(f"Jarvis: Searching Google for {query}.")
-            # Displays the response
-            google_search(query)
-            # Opens Google with the search query
 
+            if command.startswith("search for "):
+                query = command[11:]
+
+            elif command.startswith("google "):
+                query = command[7:]
+
+            elif command.startswith("find "):
+                query = command[5:]
+
+            else:
+                query = command[7:]
+
+            speak(f"Searching Google for {query}.")
+            print(f"Jarvis: Searching Google for {query}.")
+            google_search(query)
 
         elif intent == "youtube_search":
             # Checks if the user wants to search YouTube
-            query = command[5:]
-            # Removes "play " and keeps the song name
+
+            if command.startswith("search youtube for "):
+                query = command[19:]
+
+            else:
+                query = command[5:]
+
             speak(f"Searching YouTube for {query}.")
-            # Speaks the response
             print(f"Jarvis: Searching YouTube for {query}.")
-            # Displays the response
             youtube_search(query)
-            # Opens YouTube with the search query
 
         else:
             # Runs when JARVIS does not understand the command
